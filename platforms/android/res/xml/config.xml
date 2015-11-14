@@ -5,6 +5,15 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
     <allow-intent href="market:*" />
     <name>Traffic Report</name>
     <description>
@@ -14,7 +23,7 @@
         Omnix International
     </author>
     <content src="index.html" />
-    <preference name="permissions" value="none" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />

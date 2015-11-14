@@ -8,7 +8,8 @@
         Omnix International
     </author>
     <content src="index.html" />
-    <preference name="permissions" value="none" />
+    <!--<preference name="permissions" value="none" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />

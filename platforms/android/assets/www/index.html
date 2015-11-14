@@ -1,104 +1,155 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <!-- Required meta tags-->
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
     <title>My App</title>
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
-  </head>
-  <body>
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
+</head>
+
+<body class="layout-white">
+ 
+    <!-- Panels Overlay -->
     <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
+
+    <!-- Left Panel with Reveal effect -->
     <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
+        <div class="content-block">
+            <p>Left Panel content here</p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">Close me</a></p>
+            <!-- Click on link with "open-panel" and data-panel="right" attribute will open Right panel -->
+            <p><a href="#" data-panel="right" class="open-panel">Open Right Panel</a></p>
+        </div>
     </div>
-    <!-- Right panel with cover effect-->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
-    </div>
-    <!-- Views-->
+
+
+    <!-- Views -->
     <div class="views">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main">
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <!-- We have home navbar without left link-->
-            <div class="center sliding">Awesome App</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
-          <!-- Page, data-page contains page name-->
-          <div data-page="index" class="page">
-            <!-- Scrollable page content-->
-            <div class="page-content">
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+
+                    <!-- Top Navbar. In Material theme it should be inside of the page-->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="center">Awesome App</div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+                    <div class="toolbar">
+                        <div class="toolbar-inner">
+                            <!-- Toolbar links -->
+                            <a href="#" class="link">Link 1</a>
+                            <a href="#" class="link">Link 2</a>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div style="padding:10px">
+
+                            <div class="content-block-title">Simple Cards</div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="card-content-inner">This is simple card with plain text. But card could contain its own header, footer, list view, image, and any elements inside.</div>
+                                    <div id="map">mapp</div>
+                                    <div style="clear:both"></div><br/>
+                                </div>
+                            </div>
+                            
+                            <p>Page content goes here</p>
+
+
+                            <button onclick="capturePhotoWithFile();" class="button button-big button-fill button-raised color-teal">Capture Photo Camera</button>
+                            <p><a href="#" class="open-login-screen">Open Login Screen</a></p>
+
+
+                            <br>
+                            <br>
+                            <p><a href="#" class="open-panel">Open Left Panel</a></p>
+                            <img style="display:none;width:200px;" id="largeImage" src="" />
+                            <!-- Link to another page -->
+                            <a href="about.html">About app</a>
+
+
+                            
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="content-block-title">What about simple navigation?</div>
-              <div class="list-block">
-                <ul>
-                  <li><a href="about.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner"> 
-                          <div class="item-title">About</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="services.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">Services</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="form.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">Form</div>
-                        </div>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="content-block-title">Side panels</div>
-              <div class="content-block">
-                <div class="row">
-                  <div class="col-50"><a href="#" data-panel="left" class="button open-panel">Left Panel</a></div>
-                  <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Right Panel</a></div>
-                </div>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+     <div class="login-screen">
+    <div class="view">
+      <div class="page">
+        <div class="page-content login-screen-content">
+          <div class="login-screen-title">My App</div>
+          <form>
+            <div class="list-block">
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">Username</div>
+                    <div class="item-input">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">Password</div>
+                    <div class="item-input">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list-block">
+              <ul>
+                <li><a href="#" class="item-link list-button">Sign In</a></li>
+              </ul>
+              <div class="list-block-label">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><a href="#" class="close-login-screen">Close Login Screen</a></p>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
+  
+
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtQpDcjENtY1JE_mBtnz-Pgg9GlcpcZc4"> </script>
+   
     <script type="text/javascript" src="js/my-app.js"></script>
-  </body>
+</body>
+
 </html>
