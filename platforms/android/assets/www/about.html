@@ -1,28 +1,48 @@
-
-<!-- We don't need full layout here, because this page will be parsed with Ajax-->
-<!-- Top Navbar-->
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-    <div class="center sliding">About</div>
-    <div class="right">
-      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
-    </div>
-  </div>
-</div>
 <div class="pages">
-  <!-- Page, data-page contains page name-->
-  <div data-page="about" class="page">
-    <!-- Scrollable page content-->
+  <div data-page="projects" class="page no-toolbar no-navbar">
     <div class="page-content">
-      <div class="content-block">
-        <div class="content-block-inner">
-          <p>Here is About page!</p>
-          <p>Go <a href="#" class="back">back</a> or click  <a href="#" class="create-page">here </a>to create dynamic page.</p>
-          <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem. Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas sed orci. In hac habitasse platea dictumst.</p>
-          <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
-        </div>
+    
+     <div class="navbarpages">
+       <div class="navbar_home_link"><a href="index.html"><img src="images/icons/white/home.png" alt="" title="" /></a></div>
+       <div class="navbar_page_center">About</div>
+       <div class="menu_open_icon_white"><a href="#" class="open-panel"><img src="images/menu_open.png" alt="" title="" /></a></div>
+     </div>
+     <div id="pages_maincontent">
+      
+          <h2 class="page_subtitle">About minio</h2>
+          
+              <div class="page_single">
+              <img src="images/page_photo.jpg" alt="" title="" />
+              <blockquote>
+              Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated. <span>Paul Rand</span>
+              </blockquote>
+              <h3>Smart features</h3>
+              <ul class="features_list">
+                  <li><a href="photos.html"><img src="images/icons/turquoise/photos.png" alt="" title="" /><span>Photo gallery</span></a></li>
+                  <li><a href="blog.html"><img src="images/icons/turquoise/blog.png" alt="" title="" /><span>Blog layout</span></a></li>
+                  <li><a href="tabs.html"><img src="images/icons/turquoise/responsive.png" alt="" title="" /><span>Responsive tabs</span></a></li>
+                  <li><a href="toogle.html"><img src="images/icons/turquoise/toogle.png" alt="" title="" /><span>Toogles</span></a></li>
+                  <li><a href="#" data-popup=".popup-login" class="open-popup"><img src="images/icons/turquoise/user.png" alt="" title="" /><span>User login</span></a></li>
+                  <li><a href="contact.html"><img src="images/icons/turquoise/contact.png" alt="" title="" /><span>Contact form</span></a></li>
+                  <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/turquoise/heart.png" alt="" title="" /><span>Social share</span></a></li>
+                  <li><a href="#" data-panel="right" class="open-panel"><img src="images/icons/turquoise/phone.png" alt="" title="" /><span>Right slide panel</span></a></li>
+              </ul>
+              <div class="clear"></div> 
+              <h3>Simple list</h3>
+              <ul class="simple_list">
+              <li>perspiciatis unde omnis</li>
+              <li>voluptatem accusantium</li>
+              <li>doloremque laudantium</li>
+              </ul>
+              <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+              <a href="#" class="button_full">Full width button</a>
+              </div>
+      
       </div>
+      
+      
     </div>
   </div>
 </div>
