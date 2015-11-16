@@ -1574,7 +1574,7 @@ i.icon.icon-plus {
   right: auto;
   height: 1px;
   width: 100%;
-  background-color: #c8c7cc;
+  /*background-color: #c8c7cc;*/
   display: block;
   z-index: 15;
   -webkit-transform-origin: 50% 0%;
@@ -1863,7 +1863,7 @@ html.ios-gt-6.pixel-ratio-3 .list-block ul:after {
   top: auto;
   height: 1px;
   width: 100%;
-  background-color: #c8c7cc;
+  /*background-color: #c8c7cc;*/
   display: block;
   z-index: 15;
   -webkit-transform-origin: 50% 100%;

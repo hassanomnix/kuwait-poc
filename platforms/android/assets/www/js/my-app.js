@@ -54,8 +54,8 @@ function onPhotoURISuccessfarimage(imageData) {
 
 function onPhotoURISuccesshitsimages(imageData) {
 
-    
-    var image = '<li><a rel="gallery-3" href="'+imageData+'" title="Photo title" class="swipebox"><img width="100%" height="80%" src="'+imageData+'" alt="image"/></a></li>';
+
+    var image = '<li><a rel="gallery-3" href="' + imageData + '" title="Photo title" class="swipebox"><img width="100%" height="80%" src="' + imageData + '" alt="image"/></a></li>';
     $('#photoslist').prepend(image);
 
 }
@@ -120,9 +120,23 @@ $$(document).on('pageInit', function (e) {
 
 
     /* Custom Code */
-var calendarDefault = myApp.calendar({
-    input: '#calendar-default',
-});  
+    var today = new Date();
+    var weekLater = new Date().setDate(today.getDate() + 7);
+    var calendarDefault = myApp.calendar({
+        input: '#calendar-default',
+        dateFormat: 'dd / mm / yyyy',
+        events: {
+            from: today,
+            to: weekLater
+        }
+    });
+    var myCalendar = $$('.calenadr-inline')[0].f7Calendar;
+    console.log(myCalendar);
+    $(document).on('click','div.picker-calendar-day',function () {
+        console.log(this);
+         var myCalendar = $$('.calenadr-inline')[0].f7Calendar;
+        calendarDefault.close();
+    });
 
     var carscounter = 2;
 

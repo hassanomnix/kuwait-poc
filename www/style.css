@@ -37,6 +37,15 @@ Template:	Minio - Mobile Web APP Template
 /*===============================================*/
 @import "css/reset.css";
 
+
+
+@charset "utf-8";
+
+@font-face{font-family: 'hmm'; src: url('ara_fonts_2015/hmm-Reg.eot'); }
+@font-face{font-family: 'hmm'; src: url('ara_fonts_2015/hmm-Reg.ttf'); }
+@font-face{font-family: 'hmm Bold'; src: url('ara_fonts_2015/hmm-Bold.eot'); }
+@font-face{font-family: 'hmm Bold'; src: url('ara_fonts_2015/hmm-Bold.ttf'); }
+
 /*===============================================*/
 /* 2. GENERAL		 						 */
 /*===============================================*/	
@@ -48,7 +57,7 @@ width: 100%;
 overflow-x: hidden;
 }
 body {
-font-family: 'Source Sans Pro', sans-serif;
+font-family: 'hmm';
 margin: 0;
 padding: 0;
 color: #232323;
@@ -63,11 +72,18 @@ font-weight:300;
     direction: rtl;
 }
 .numbers{
-        background: #122438;
+    background: #122438;
     color: #fff;
-    padding: 10px;
-    border: 1px solid #122438;
-    border-radius: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    font-size: 13px;
+    margin-top: 5px;
+
 }
 .clear{ 
 clear:both; 
@@ -172,7 +188,7 @@ position: relative;
 overflow: hidden;
 text-overflow: ellipsis;
 font-size: 14px;
-font-family: inherit;
+font-family: 'hmm';
 cursor: pointer;
 }
 .button.active {
@@ -340,9 +356,11 @@ background-position: 10px 50%;
 /*===============================================*/
 /* 5.1 TOP NAVIGATION AND HEADER */	
 .logo_title{ 
-font-size:30px;
-font-weight:700;
+font-size:20px;
+font-weight:normal;
 padding-left:10px;
+margin-top: 5px;
+display: block;
 color:#FFFFFF;
 }
 .navbar:after {
@@ -376,7 +394,16 @@ width:100%;
 height:60px;
 }
 .menu_open_icon{ 
-background:url(images/menu_open.png) no-repeat center;
+width: 20px;
+height: 20px;
+display: block;
+position: absolute;
+left: 10px;
+top: 15px;
+text-align: center;
+vertical-align: middle;
+color: #fff !important;
+padding-right: 4px;
 }
 .menu_open_icon_white a{
 display:block;
@@ -388,20 +415,34 @@ padding:0 0 0 0;
 text-align:center;
 }
 .navbar_home_link a{
-float:left;
+float:right;
 width:23%;
 padding:15px 0 0 3%;
+color: #fff;
+margin-right: 20px;
 }
 .navbar_home_link img{
 max-width:20%;
 }
+.back_icon{
+  float: left;
+  color: #fff !important;
+}
+.fa-chevron-left{
+  color: #fff !important;
+}
 .navbar_page_center{
 width:50%;
-float:left;
-line-height:50px;
+float:right;
 text-align:center;
 color:#FFFFFF;
 font-size:18px;
+margin-right: 10px;
+margin-top: 20px;
+display: block;
+}
+.fa-bars{
+  color: #fff !important;
 }
 /* 5.1 FOOTER TOOLBAR */
 ul.toolbar_icons{
@@ -470,9 +511,9 @@ letter-spacing:-0.5px;
 
 span.title-bold{
     font-weight: bold;
-    font-size:22px;
+    font-size:20px;
     padding-left:3px;
-    padding-right:3px;
+    padding-right:5px;
 }
 #pages_maincontent h3{
 font-size:20px;
@@ -539,13 +580,19 @@ opacity: 1;
 background: #fff;
 }
 a.swiper_read_more{
-color:#ffca2e;
-border:1px solid #fff;
+background-color:#A0D9FF;
 padding:20px 30px;
 text-decoration:none;
 margin:30px 0 0 0;
 display:inline-block;
 font-size:20px;
+font-weight: bold;
+color: #122438 !important;
+box-shadow: 2px 2px 5px #000;
+}
+.fa-car{
+  margin-left: 5px;
+  display: block;
 }
 /*===============================================*/
 /* 8. LISTS */
@@ -787,7 +834,7 @@ display:block;
 margin:0px 0;
 }
 .list-block li{
-
+border: none !important;
 padding:10px 0 10px 0;
 margin:0 0 20px 0;
 }
@@ -910,14 +957,25 @@ padding:0px;
 margin:0px;
 font-style:italic;
 }
-
-
 /*===============================================*/
 /* 12. FORMS */
 /*===============================================*/	
 /* 12.1 CONTACT FORM */
 .label{
     font-weight: bold;
+    color: #0c928d !important;
+}
+#other_car_number input{
+  border-bottom: 1px solid #ccc;
+}
+#other_car_number input:focus{
+  border-bottom: 1px solid #0c928d;
+}
+#your_car_number input{
+  border-bottom: 1px solid #ccc;
+}
+#your_car_number input:focus{
+  border-bottom: 1px solid #0c928d;
 }
 .ctxform{
 width:100%;
@@ -1134,6 +1192,7 @@ height: 50px;
 .toolbar {
 height: 50px;
 }
+
 .swiper-container {
 height: 100%;
 }
